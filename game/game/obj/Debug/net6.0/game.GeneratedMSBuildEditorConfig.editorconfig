@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = game
-build_property.ProjectDir = C:\.NET projects\game\game\
+build_property.ProjectDir = C:\Users\79080\source\repos\SAD_game\game\game\
