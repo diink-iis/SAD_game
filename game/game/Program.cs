@@ -6,93 +6,85 @@ namespace ConsoleApp
 {
     public class Army
     {
-        const int total_price = 100;
-        const int LightAttack = 10;
-        const int LightDefense = 10;
-        const int LightHP = 5;
-        const int HeavyAttack = 10;
-        const int HeavyDefense = 15;
-        const int HeavyHP = 10;
-        const int KnightAttack = 30;
-        const int KnightDefense = 30;
-        const int KnightHP = 40;
+        const int totalPrice = 100;
+        const double actualPrice = totalPrice / 3;
         public List<Unit> list;
-        public Army()
+        public Tuple<Tuple<double, double, double>, Tuple<double, double, double>, Tuple<double, double, double>> createArmy()
         {
-            list = new List<Unit>();
-            var CurrentPrice = total_price;
-            Random rnd = new();
-            while (CurrentPrice > 0)
-            {
-                var type = rnd.Next(1, 4);
-                Unit unit;
-                int RemainPrice;
-                switch (type)
-                {
-
-                    case 1:
-                        unit = new LightInfantry(LightAttack, LightDefense, LightHP, CurrentPrice, out RemainPrice);
-                        break;
-                    case 2:
-                        unit = new HeavyInfantry(HeavyAttack, HeavyDefense, HeavyHP, CurrentPrice, out RemainPrice);
-                        break;
-                    default:
-                        unit = new Knight(KnightAttack, KnightDefense, KnightHP, CurrentPrice, out RemainPrice);
-                        break;
-
-                }
-                CurrentPrice = RemainPrice;
-                list.Add(unit);
-            }
+            Tuple<double, double, double> ligthInfUnit = new LightInfantry().calculateUnit(actualPrice);
+            Tuple<double, double, double> heavyInfUnit = new HeavyInfantry().calculateUnit(actualPrice);
+            Tuple<double, double, double> knightUnit = new Knight().calculateUnit(actualPrice);
+            return Tuple.Create(ligthInfUnit, heavyInfUnit, knightUnit);
         }
+        
     }
     public class Unit
     {
-        public int HP { get; set; }
-        public int Attack { get; set; }
-        public int Defense { get; set; }
-
-        public Unit(int hp, int attack, int defense, int CurrentPrice, out int RemainPrice)
+        public double calculateCoeff(double attackWeight, double defenceWieght, double hpWeight, double sumPrice)
         {
-            Random rnd = new();
-            HP = rnd.Next(1, Math.Min(hp, CurrentPrice));
-            CurrentPrice -= HP;
-            Attack = rnd.Next(1, Math.Min(attack, CurrentPrice == 0?attack:CurrentPrice));
-            CurrentPrice -= Attack;
-            Defense = rnd.Next(1, Math.Min(defense, CurrentPrice == 0?defense : CurrentPrice));
-            CurrentPrice -= Defense;
-            RemainPrice = CurrentPrice;
+            return sumPrice / (attackWeight + defenceWieght + hpWeight);
         }
+        double calculateHP(double HP, double coeff)
+        {
+            return HP * coeff;
+        }
+        double calculateAttack(double attack, double coeff)
+        {
+            return attack * coeff;
+        }
+        double calculateDefence(double defence, double coeff)
+        {
+            return defence * coeff;
+        }
+        public Tuple<double, double, double> calculateMetrics(double hpCoeff, double attackCoeff, double defenceCoeff, double price)
+        {
+            double coeff = calculateCoeff(hpCoeff, attackCoeff, defenceCoeff, price);
+            double hp = calculateHP(hpCoeff, coeff);
+            double attack = calculateAttack(attackCoeff, coeff);
+            double defence = calculateDefence(defenceCoeff, coeff);
+            return Tuple.Create(hp, attack, defence);
+        }
+
 
     }
 
     public class Fight
     {
-
-
     }
 
     public class LightInfantry : Unit
     {
-        public LightInfantry(int hp, int attack, int defense, int CurrentPrice, out int RemainPrice) : base(hp, attack, defense, CurrentPrice, out RemainPrice)
+        const double attackParam = 1;
+        const double defenseParam = 1;
+        const double hpParam = 2.25;
+        public Tuple<double, double, double> calculateUnit(double RemainPrice)
         {
+            Tuple<double, double, double> coeff = calculateMetrics(attackParam, defenseParam, hpParam, RemainPrice);
+            return coeff;
         }
-
-
     }
 
     public class HeavyInfantry : Unit
     {
-        public HeavyInfantry(int hp, int attack, int defense, int CurrentPrice, out int RemainPrice) : base(hp, attack, defense, CurrentPrice, out RemainPrice)
+        const double hpParam = 0.75;
+        const double attackParam = 1.5;
+        const double defenseParam = 2;
+        public Tuple<double, double, double> calculateUnit(double RemainPrice)
         {
+            Tuple<double, double, double> coeff = calculateMetrics(attackParam, defenseParam, hpParam, RemainPrice);
+            return coeff;
         }
-
     }
 
     public class Knight : Unit
     {
-        public Knight(int hp, int attack, int defense, int CurrentPrice, out int RemainPrice) : base(hp, attack, defense, CurrentPrice, out RemainPrice)
+        const double attackParam = 1.75;
+        const double defenseParam = 0.5;
+        const double hpParam = 2;
+        public Tuple<double, double, double>  calculateUnit(double RemainPrice)
         {
+            Tuple<double, double, double> coeff = calculateMetrics(attackParam, defenseParam, hpParam, RemainPrice);
+            return coeff;
         }
 
     }
@@ -101,8 +93,12 @@ class Program
     {
         static void Main(string[] args)
         {
-            var army = new Army();
-
+            //var army = new Army();
+            var test = new Knight();
+            var test2 = new Army();
+            Console.WriteLine(test.calculateCoeff(0.75, 1.5, 2, 33.3));
+            Console.WriteLine(test.calculateUnit(33.3));
+            Console.WriteLine(test2.createArmy());
         }
     }
 }
