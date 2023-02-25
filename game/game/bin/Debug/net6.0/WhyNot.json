@@ -1,0 +1,27 @@
+{
+  "TeamName": "WhyNot?",
+  "UnitDiscriptions": [
+    {
+      "UnitDescriptionId": 1,
+      "UnitName": "Infantry",
+      "Attack": 5,
+      "Defense": 13,
+      "HitPoints": 5
+    },
+    {
+      "UnitDescriptionId": 2,
+      "UnitName": "Heavy Infantry",
+      "Attack": 11,
+      "Defense": 4,
+      "HitPoints": 8
+    },
+    {
+      "UnitDescriptionId": 3,
+      "UnitName": "Knight",
+      "Attack": 2,
+      "Defense": 11,
+      "HitPoints": 10
+    }
+  ],
+  "Units": [ 1, 2, 3, 1 ]
+}

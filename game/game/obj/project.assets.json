@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\iefim\\.nuget\\packages\\": {}
+    "C:\\Users\\isaev\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\.NET projects\\game\\game\\game.csproj",
+      "projectUniqueName": "C:\\Users\\isaev\\Desktop\\Study\\3 курс\\ППА\\SAD_game\\game\\game\\game.csproj",
       "projectName": "game",
-      "projectPath": "C:\\.NET projects\\game\\game\\game.csproj",
-      "packagesPath": "C:\\Users\\iefim\\.nuget\\packages\\",
-      "outputPath": "C:\\.NET projects\\game\\game\\obj\\",
+      "projectPath": "C:\\Users\\isaev\\Desktop\\Study\\3 курс\\ППА\\SAD_game\\game\\game\\game.csproj",
+      "packagesPath": "C:\\Users\\isaev\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\isaev\\Desktop\\Study\\3 курс\\ППА\\SAD_game\\game\\game\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\iefim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\isaev\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
