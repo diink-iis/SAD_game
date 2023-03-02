@@ -1,0 +1,15 @@
+C:\.NET projects\principles\principles\bin\Debug\net6.0\principles.exe
+C:\.NET projects\principles\principles\bin\Debug\net6.0\principles.deps.json
+C:\.NET projects\principles\principles\bin\Debug\net6.0\principles.runtimeconfig.json
+C:\.NET projects\principles\principles\bin\Debug\net6.0\principles.dll
+C:\.NET projects\principles\principles\bin\Debug\net6.0\principles.pdb
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.csproj.AssemblyReference.cache
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.AssemblyInfoInputs.cache
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.AssemblyInfo.cs
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.csproj.CoreCompileInputs.cache
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.dll
+C:\.NET projects\principles\principles\obj\Debug\net6.0\refint\principles.dll
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.pdb
+C:\.NET projects\principles\principles\obj\Debug\net6.0\principles.genruntimeconfig.cache
+C:\.NET projects\principles\principles\obj\Debug\net6.0\ref\principles.dll
