@@ -4,24 +4,37 @@
     {
       "UnitDescriptionId": 1,
       "UnitName": "Infantry",
-      "Attack": 5,
-      "Defense": 13,
-      "HitPoints": 5
+      "Name": "1386",
+      "Attack": 3,
+      "Defence": 3,
+      "HitPoints": 7
     },
     {
       "UnitDescriptionId": 2,
       "UnitName": "Heavy Infantry",
-      "Attack": 11,
-      "Defense": 4,
-      "HitPoints": 8
+      "Name": "1614",
+      "Attack": 7,
+      "Defence": 7,
+      "HitPoints": 7
+    },
+    {
+      "UnitDescriptionId": 2,
+      "UnitName": "Heavy Infantry",
+      "Name": "1828",
+      "Attack": 7,
+      "Defence": 7,
+      "HitPoints": 7
     },
     {
       "UnitDescriptionId": 3,
       "UnitName": "Knight",
-      "Attack": 2,
-      "Defense": 11,
-      "HitPoints": 10
+      "Name": "1487",
+      "Attack": 10,
+      "Defence": 8,
+      "HitPoints": 24
     }
   ],
-  "Units": [ 1, 2, 3, 1 ]
+  "Units": [
+    1
+  ]
 }
