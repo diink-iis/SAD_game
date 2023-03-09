@@ -1,0 +1,15 @@
+C:\.NET projects\Object pool\Object pool\bin\Debug\net6.0\Object pool.exe
+C:\.NET projects\Object pool\Object pool\bin\Debug\net6.0\Object pool.deps.json
+C:\.NET projects\Object pool\Object pool\bin\Debug\net6.0\Object pool.runtimeconfig.json
+C:\.NET projects\Object pool\Object pool\bin\Debug\net6.0\Object pool.dll
+C:\.NET projects\Object pool\Object pool\bin\Debug\net6.0\Object pool.pdb
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.csproj.AssemblyReference.cache
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.AssemblyInfoInputs.cache
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.AssemblyInfo.cs
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.csproj.CoreCompileInputs.cache
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.dll
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\refint\Object pool.dll
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.pdb
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\Object pool.genruntimeconfig.cache
+C:\.NET projects\Object pool\Object pool\obj\Debug\net6.0\ref\Object pool.dll
