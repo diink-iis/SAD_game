@@ -1,0 +1,15 @@
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\bin\Debug\net6.0\Lazy_Initialization.exe
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\bin\Debug\net6.0\Lazy_Initialization.deps.json
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\bin\Debug\net6.0\Lazy_Initialization.runtimeconfig.json
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\bin\Debug\net6.0\Lazy_Initialization.dll
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\bin\Debug\net6.0\Lazy_Initialization.pdb
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.csproj.AssemblyReference.cache
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.GeneratedMSBuildEditorConfig.editorconfig
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.AssemblyInfoInputs.cache
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.AssemblyInfo.cs
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.csproj.CoreCompileInputs.cache
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.dll
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\refint\Lazy_Initialization.dll
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.pdb
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\Lazy_Initialization.genruntimeconfig.cache
+C:\.NET projects\Lazy_Initialization\Lazy_Initialization\obj\Debug\net6.0\ref\Lazy_Initialization.dll
