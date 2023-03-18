@@ -2,39 +2,44 @@
   "TeamName": "WhyNot?",
   "UnitDiscriptions": [
     {
+      "UnitDescriptionId": 2,
+      "UnitName": "Heavy Infantry",
+      "Attack": 7,
+      "Defence": 7,
+      "HitPoints": 7
+    },
+    {
+      "UnitDescriptionId": 2,
+      "UnitName": "Heavy Infantry",
+      "Attack": 7,
+      "Defence": 7,
+      "HitPoints": 7
+    },
+    {
       "UnitDescriptionId": 1,
-      "UnitName": "Infantry",
-      "Name": "1386",
+      "UnitName": "Archer",
       "Attack": 3,
       "Defence": 3,
-      "HitPoints": 7
+      "HitPoints": 7,
+      "SpecialAbilityType": 1,
+      "SpecialAbilityStrength": 3,
+      "SpecialAbilityRange": 3
     },
     {
       "UnitDescriptionId": 2,
-      "UnitName": "Heavy Infantry",
-      "Name": "1614",
+      "UnitName": "Archer",
       "Attack": 7,
       "Defence": 7,
-      "HitPoints": 7
-    },
-    {
-      "UnitDescriptionId": 2,
-      "UnitName": "Heavy Infantry",
-      "Name": "1828",
-      "Attack": 7,
-      "Defence": 7,
-      "HitPoints": 7
-    },
-    {
-      "UnitDescriptionId": 3,
-      "UnitName": "Knight",
-      "Name": "1487",
-      "Attack": 10,
-      "Defence": 8,
-      "HitPoints": 24
+      "HitPoints": 7,
+      "SpecialAbilityType": 1,
+      "SpecialAbilityStrength": 3,
+      "SpecialAbilityRange": 3
     }
   ],
   "Units": [
-    1
+    2,
+    2,
+    1,
+    2
   ]
 }

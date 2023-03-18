@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace game
 {
-    public class Archer : ISpecialAbility, IHealable
+    public class Archer : ISpecialAbility
     {
         public string UnitName { get; } = "Archer";
         public int SpecialAbilityType { get; } = 1;
@@ -34,7 +38,6 @@ namespace game
             }
             Console.WriteLine($"все оппоненты в пределах досягаемости оказались мертвы");
         }
-        // метод из интерфейса лечилки
     }
 
     public class Healer : ISpecialAbility
@@ -46,10 +49,22 @@ namespace game
         public void DoAction(int pos, Army my, Army enemy)
         {
         }
-        public static void DoAction()
+        public static void DoAction(int pos, Unit me, Army my)
         {
-            // здесь нужен метод, как он хилит
+            int barrier1 = Math.Max(pos - me.SpecialAbilityRange, 0);
+            int barrier2 = Math.Min(pos + me.SpecialAbilityRange, my.List.Count - 1);
+            for (int i = barrier1; i <= barrier2; i++)
+            {
+                var u = my.List[i];
+                bool check = typeof(IHealable).IsAssignableFrom(u.Type);
+                if (check && u.HitPoints > 0 && u.HitPoints < u.MaxHP)
+                {
+                    IHealable.GainHealth(me.SpecialAbilityStrength, u);
+                    Console.WriteLine($"юнит {u.Name} излечился до {u.HitPoints} здоровья");
+                    return;
+                }
+            }
+            Console.WriteLine($"все дружеские юниты в пределах досягаемости либо мертвы, либо здоровы");
         }
-        // метод из интерфейса лечилки
     }
 }

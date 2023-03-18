@@ -8,6 +8,9 @@ namespace game
 {
     public interface IHealable
     {
-        // здесь какой-нибудь метод для лечения
+        public static void GainHealth(int hpower, Unit unit)
+        {
+            unit.HitPoints = Math.Min(unit.MaxHP, unit.HitPoints + hpower);
+        }
     }
 }

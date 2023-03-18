@@ -14,22 +14,27 @@ namespace game
         public string UnitName { get; }
         [JsonIgnore]
         public string Name { get; }
+        [JsonIgnore]
+        public Type Type { get; }
         public int Attack { get; }
         public int Defence { get; }
+        [JsonIgnore]
+        public int MaxHP { get; }
         public int HitPoints { get; set; }
         [JsonIgnore]
         public int UnitPrice { get; }
         public int SpecialAbilityType { get; }
         public int SpecialAbilityStrength { get; }
         public int SpecialAbilityRange { get; }
-        public Unit(int uid, string uname, int att, int def, int hp, int sat = 0, int sas = 0, int sar = 0)
+        public Unit(int uid, string uname, Type type, int att, int def, int hp, int sat = 0, int sas = 0, int sar = 0)
         {
             UnitDescriptionId = uid;
             UnitName = uname;
             Name = new Random().NextInt64(1000, 1999).ToString();
+            Type = type;
             Attack = att;
             Defence = def;
-            HitPoints = hp;
+            HitPoints = MaxHP = hp;
             UnitPrice = att + def + hp;
             SpecialAbilityType = sat;
             SpecialAbilityStrength = sas;
@@ -51,7 +56,7 @@ namespace game
             }
             if (this.SpecialAbilityType == 2)
             {
-                // сюда дописать хилера
+                Healer.DoAction(pos, one.List[pos], one);
             }
         }
         public static List<Unit> operator *(Unit unit, int amount)
@@ -59,7 +64,7 @@ namespace game
             List<Unit> res = new List<Unit>();
             for (int i = 0; i < amount; i++)
             {
-                res.Add(new Unit(unit.UnitDescriptionId, unit.UnitName, unit.Attack, unit.Defence, unit.HitPoints,
+                res.Add(new Unit(unit.UnitDescriptionId, unit.UnitName, unit.Type, unit.Attack, unit.Defence, unit.HitPoints,
                     unit.SpecialAbilityType, unit.SpecialAbilityStrength, unit.SpecialAbilityRange));
             }
             return res;
